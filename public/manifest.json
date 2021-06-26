@@ -1,0 +1,60 @@
+{
+    "name": "{Finsweet Extension for WebFlow",
+    "description": "Hides/Shows sidebar and changes background colour of breakpoints to red",
+    "version": "1.0",
+    "manifest_version": 3,
+    "author":"Kenneth Ndung'u",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting","tabs","webNavigation","management"],
+    "host_permissions": [
+      "https://webflow.com/design/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "{Finsweet",
+      "default_icon": {
+        "16": "icons/finsweetlogo16x16.png",
+        "32": "icons/finsweetlogo32.png",
+        "48": "icons/finsweetlogo48.png",
+        "128": "icons/finsweetlogo128.png"
+      }
+    },
+    "icons": {
+        "16": "icons/finsweetlogo16x16.png",
+        "32": "icons/finsweetlogo32.png",
+        "48": "icons/finsweetlogo48.png",
+        "128": "icons/finsweetlogo128.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://webflow.com/design/*"],
+          "run_at": "document_idle",
+          "css": ["css/style.css"]
+        }
+      ],
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+        "description": "Open popup.html"
+      },
+      "hide-right-sidebar": {
+        "suggested_key": {
+            "default": "Ctrl+Right",
+            "mac": "Command+Right"
+        },
+        "description": "Hide the right side bar"
+    },
+    "show-right-sidebar": {
+      "suggested_key": {
+          "default": "Ctrl+Left",
+          "mac": "Command+Left"
+      },
+      "description": "Show the right side bar"
+  }
+    }
+  }
