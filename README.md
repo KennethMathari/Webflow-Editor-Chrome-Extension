@@ -1,6 +1,6 @@
 # WebFlow Editor Chrome Extension
 
-This chrome extension hides/show the right sidebar in the WebFlow webpage when the checkbox in the extension's UI is clicked. It also changes the background colour of active breakpoints tabs above the default to red.
+This chrome extension hides/show the right sidebar in the WebFlow Editor webpage when the checkbox in the extension's UI is clicked. It also changes the background colour of active breakpoints tabs above the default to red.
 
 Additional features include:
 
@@ -20,8 +20,8 @@ And it will generate a `dist` folder containing the production ready code to be 
 
 ## Show Right Side Bar
 
-![](public/images/show_sideBar.PNG)
+![](dist/images/show_sideBar.PNG)
 
 ## Hide Right Side Bar
 
-![](public/images/hide_sideBar.PNG)
+![](dist/images/hide_sideBar.PNG)
